@@ -1,0 +1,22 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<body>
+<form action="doctor_otp" method="post">
+    {% csrf_token %}
+    <h1 style="color:black; text-align: center; margin-top: 30px; margin-left: 5px;">WELCOME Doctor Dashboard</h1>
+    <div style="margin-top: 25px;" class="second-heading">
+        <h2 style="text-align: center; color: #ffc800;">{{username}}</h2>
+    </div>
+    <input hidden="" type="email" name='email' value='{{email |safe }}'>
+    <input hidden="" type="Text" name='password' value='{{password|safe}}'>
+    <input hidden="" type='Text' name='username' value='{{username|safe}}'>
+    <br>
+    <div style="text-align: center;" class="form-group">
+        <a href="home.html">
+        <input class="btn btn-primary" type="submit" value="Verify Documents">
+        </a>
+    </div>
+</form>
+</body>
